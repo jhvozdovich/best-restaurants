@@ -34,6 +34,9 @@ _The purpose of this project is to create a C# web application and practice data
 *'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.bash_profile
 4. Download the MySQL Workbench DMG file [here](https://dev.mysql.com/downloads/file/?id=484391)
 5. Open Local instance 3306 with the password you set.
+6. Within the BestRestaurant directory add your MySQL password to the appsettings.json file on line 3.
+* "Server=localhost;Port=3306;database=best_restaurants;uid=root;pwd=YOURPASSWORDHERE;"
+* Make any other changes needed if you have an alternative server, port, or uid selected. These are the default settings.
 
 #### To create a local version of the database:
 1. Open MySQL Workbench and Local Instance 3306.
@@ -47,13 +50,13 @@ CREATE DATABASE `best_restaurants` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLAT
 6. Select the database in the left navigation pane.
 7. Paste the following code into the query section and run it with the lightning bolt button to create the necessary tables:
 
-CREATE TABLE `cuisine` (
+CREATE TABLE `cuisines` (
   `CuisineId` int(11) NOT NULL DEFAULT '0',
   `Name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`CuisineId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `restaurant` (
+CREATE TABLE `restaurants` (
   `CuisineId` int(11) DEFAULT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
