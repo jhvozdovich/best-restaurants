@@ -51,10 +51,10 @@ CREATE DATABASE `best_restaurants` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLAT
 7. Paste the following code into the query section and run it with the lightning bolt button to create the necessary tables:
 
 CREATE TABLE `cuisines` (
-  `CuisineId` int(11) NOT NULL DEFAULT '0',
+  `CuisineId` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`CuisineId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `restaurants` (
   `CuisineId` int(11) DEFAULT NULL,
