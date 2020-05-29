@@ -44,11 +44,7 @@ _The purpose of this project is to create a C# web application and practice data
 3. Paste the following in the query section to create the database:
 
 CREATE DATABASE `best_restaurants` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-
-4. Press the lightning bolt button to run this command.
-5. If the database does not appear, right click in the schemas bar and select Refresh All.
-6. Select the database in the left navigation pane.
-7. Paste the following code into the query section and run it with the lightning bolt button to create the necessary tables:
+USE `best_restaurants`;
 
 CREATE TABLE `cuisines` (
   `CuisineId` int(11) NOT NULL AUTO_INCREMENT,
@@ -63,6 +59,9 @@ CREATE TABLE `restaurants` (
   `RestaurantId` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`RestaurantId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+4. Press the lightning bolt button to run this command.
+5. If the database does not appear, right click in the schemas bar and select Refresh All.
 
 ### Known Bugs
 
